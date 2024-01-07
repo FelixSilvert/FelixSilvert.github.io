@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="icon" type="image/png" href="images/profile-pic.png">
+    <title>SILVERT Félix Portfolio</title>
+    <script src="https://kit.fontawesome.com/beb62ff260.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <nav>
+                <h1 class="logo"><p class="silvert">Silvert</p> <p class="felix">Félix</p></h1>
+                <ul id="sidemenu">
+                    <li><a href="./index.html#acceuil">Accueil</a></li>
+                    <li><a href="./index.html#apropos">À propos</a></li>
+                    <li><a href="./index.html#projets1">Projets</a></li>
+                    <li><a href="./index.html#contact1">Contact</a></li>
+                    <li><a href="./index.html#contact1">Anglais <img src="images/uk.png" alt="" class="icon" id="drap"></a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
+
+    <section id="description">
+        <h1 class="name">Jeu de Société</h1>
+
+        <p class="text-description">
+            Projet universitaire réalisé en groupe de 4 en PHP Laravel. <br> C'est un site web sur lequel des jeux de sociétés sont répértoriés avec des fonctionnalitées de filtrage, de modification et de page descriptives.
+        </p>
+
+        <h1 class="name1">Capture d'écran</h1>
+    </section>
+</body>
+</html>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    let mybutton = document.getElementById("myBtn");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
+    }
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>

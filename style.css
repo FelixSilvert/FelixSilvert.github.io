@@ -1,0 +1,534 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arimo', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    color: black;
+    background: url(images/back-7.jpg);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.back{
+    height: 100px;
+}
+
+/*TOP BUTTON*/
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #1515AF; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 28px; /* Increase font size */
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    transition: all 300ms ease;
+}
+
+#myBtn:hover {
+    background-color: #0e0e69; /* Add a dark-grey background on hover */
+}
+
+
+
+/*HEADER*/
+
+header{
+    width: 100%;
+}
+
+.menu{
+    padding: 30px 10%;
+}
+
+#drap{
+    position: absolute;
+    left: 65px;
+    top: -8px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    font-size: 35px;
+    display: inline-flex;
+    user-select: none;
+}
+
+.silvert{
+    margin-right: 12px;
+}
+
+.silvert::first-letter{
+    color: #1515AF;
+}
+
+.felix::first-letter{
+    color: #1515AF;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #1515AF;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/*HAMBURGER*/
+
+nav .fas{
+    display: none;
+}
+
+/*ACCEUIL*/
+
+.section-container{
+    display: flex;
+}
+
+#profile{
+    display: flex;
+    justify-content: center; 
+    gap: 5rem;
+    height: 80vh;
+    padding-top: 4vh;
+    height: 76vh;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.profile-pic{
+    display: flex;
+    height: 350px;
+    width: 350px;
+    margin: auto 0;
+}
+
+.text{
+    align-self: center;
+    text-align: center;
+}
+
+.text p{
+    font-weight: 600;
+}
+
+.text_1{
+    text-align: center;
+}
+
+.text_2{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.name{
+    font-size: 3rem;
+    text-align: center;
+    color:#1515AF;
+}
+
+#social{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.icon{
+    cursor: pointer;
+    height: 2rem;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn{
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.contact_button, .cv_button {
+    border: #1515AF 0.2rem solid;
+}
+
+.contact_button:hover, .cv_button:hover {
+    cursor: pointer;
+}
+
+.contact_button, .cv_button:hover {
+    color: white;
+    background: #1515AF;
+}
+
+.contact_button:hover{
+    background: #0e0e69;
+}
+
+.cv_button{
+    background: white;
+    color: #1515AF;
+}
+
+.cv_button:hover{
+    border: #1515AF 0.1rem solid;
+}
+
+
+
+/*A PROPOS*/
+
+#apropos{
+    padding: 80px 0 80px;
+    margin-top: 70px;
+    background: #E1E1F6;
+    color: black;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.container{
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.user-pic{
+    border-radius: 55px;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-1{
+    flex-basis: 35%;
+}
+
+.col-2{
+    flex-basis: 59%;
+}
+
+.col-2 h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #1515AF;
+    margin-bottom: 30px;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #1515AF;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+}
+
+.tab-contents ul li img{
+    height: 35px;
+    float: right;
+    margin-left: 10px;
+    position: absolute;
+}
+
+.tab-contents ul li span{
+    color: #1515AF;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: flex;
+}
+
+#competences ul{
+    margin-right: 150px;
+}
+
+
+
+/*PROJETS*/
+
+.projets{
+    padding: 50px;
+    padding-top: 125px;
+}
+
+.projet-list{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px,300px));
+    align-items: center;
+    justify-content: center;
+    gap: 2.3rem;
+    margin-top: 4.2rem;
+}
+
+.projet-list a{
+    text-decoration: none;
+    color: black;
+}
+
+.img-projet{
+    height: auto;
+    width: 100%;
+    border-radius: 28px;
+    margin-bottom: 1.4rem;
+}
+
+.row1{
+    background: #E1E1F6;
+    border-radius: 28px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px #1515AF;
+    padding: 20px;
+    transition: all .50s ease;
+}
+
+.main-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.row1 h5{
+    font-size: 20px;
+    font-weight: 600;
+    color: #1515AF;
+}
+
+.github{
+    height: 50px;
+}
+
+.row1 h4{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.row1:hover{
+    border: 1px solid #1515AF;
+    transform: translateY(-5px) scale(1.03);
+    cursor: pointer;
+}
+
+.center-text{
+    color: #1515AF;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.img-techno img{
+    height: 35px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.img-techno{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*CONTACT*/
+
+#contact{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    background: #E1E1F6;
+}
+
+.contact-info-upper-container{
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: #1515AF 0.1rem solid;
+    border-color: #1515AF;
+    background: #E1E1F6;
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+.contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.contact-info-container p{
+    font-size: larger;
+}
+
+.contact-icon{
+    cursor: default;
+    height: 2rem;
+    padding-left: 12px;
+}
+
+.section_text_p1{
+    text-align: center;
+    font-weight: 600;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+    color:#1515AF;
+}
+
+.contact-info-upper-container p a{
+    text-decoration: none;
+    color: black;
+}
+
+.contact-info-upper-container p{
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 12px;
+}
+
+
+
+/* PAGE PROJET */
+
+#description{
+    margin-top: 20vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
+}
+
+.img-desc{
+    display: block;
+    margin: auto;
+    max-width: 1000px;
+    margin-bottom: 100px;
+}
+
+.text-description{
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    line-height: 25px;
+}
+
+.lien-github{
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    border-radius: 2rem;
+    border: #1515AF 0.2rem solid;
+    border-color: #1515AF;
+    color: #1515AF;
+    font-weight: 600;
+    background:white;
+    margin: 2rem auto;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: 200ms ease;
+}
+
+.lien-github:hover{
+    transform: scale(1.05);
+    transition: 200ms ease;
+}
+
+.lien-github p{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.lien-github img{
+    margin-left: 10px;
+}
+
+.name1{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 35px;
+    text-align: center;
+    color:#1515AF;
+}

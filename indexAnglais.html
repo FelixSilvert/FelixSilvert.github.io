@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="icon" type="image/png" href="images/profile-pic.png">
+    <title>SILVERT Félix Portfolio</title>
+    <script src="https://kit.fontawesome.com/beb62ff260.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <nav>
+                <h1 class="logo"><p class="silvert">Silvert</p> <p class="felix">Félix</p></h1>
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#apropos">About Me</a></li>
+                    <li><a href="#projets1">Projects</a></li>
+                    <li><a href="#contact1">Contact</a></li>
+                    <li><a href="./index.html">French <img src="images/drapeau.png" alt="" class="icon" id="drap"></a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>
+
+    <section id="profile">
+        <div class="profile-pic">
+            <img src="images/profile-pic.png" alt="profile-pic">
+        </div>
+        <div class="text">
+            <p class="text_1">Hello👋, I'm</p>
+            <h1 class="name">Félix Silvert</h1>
+            <p class="text_2">Student in web development</p>
+            <div class="btn-container">
+                <button class="btn cv_button" onclick="window.open('./images/CV-anglais.pdf')">My CV</button>
+                <button class="btn contact_button" onclick="location.href='./#contact'">Contact me</button>
+            </div>
+            <div id="social">
+                <img src="./images/linkedin_logo.png" alt="linkedin_logo" class="icon" onclick="window.open('https://www.linkedin.com/in/felix-silvert/')">
+                <img src="./images/github.png" alt="github_logo" class="icon" onclick="window.open('https://github.com/FelixSilvert')">
+            </div>
+        </div>
+    </section>
+
+    <section id="apropos"> 
+        <div class="container">
+            <div class="row"> 
+                <div class="col-1">
+                    <img src="images/DSC03170.png" alt="user" class="user-pic">
+                </div>
+                <div class="col-2">
+                    <h1>About Me</h1>
+                    <p class="text-propos">
+                        Currently a second year BUT computer science student, I have learned several languages ​​such as JAVA, PHP, HTML/CSS, with which I am comfortable. However, I continue to regularly learn new languages ​​for different personal projects such as JavaScript/TypeScript and React(Next.JS). I am also trained in the use of GIT and the SCRUM framework.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('competences')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experiences')">Experiences</p>
+                        <p class="tab-links" onclick="opentab('education')">Diplomas</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="competences">
+                        <ul>
+                            <li style="line-height:30px;"> HTML/CSS <img src="images/logo-HTMLCSS.svg" alt=""></li>
+                            <li style="line-height:30px;"><br>PHP(Laravel) <img src="images/Laravel.svg" alt=""></li>
+                            <li style="line-height:30px;"><br>GIT <img src="images/Git_icon.svg">
+                            <li style="line-height:30px;"><br>Python <img src="images/Python-logo-notext.svg" alt=""></li>
+                        </ul>
+                        <ul>
+                            <li style="line-height:30px;">JavaScript/TypeScript <img src="images/logo-JSTS.jpg" alt=""></li>
+                            <li style="line-height:30px;"><br>React(Next.JS) <img src="images/logo-reactnode.png" alt=""></li>
+                            <li style="line-height:30px;"><br>SQL/PLPGSQL <img src="images/Sql_data_base_with_logo.png" alt=""></li>
+                            <li style="line-height:30px;"><br>JAVA <img src="images/Java_Logo.svg" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experiences">
+                        <ul>
+                            <li><span>2nd year internship</span><br>10-week internship within the INFOTEL company as a fullstack developer</li>
+                            <li><br><span>SEA</span><br>During my training we had several SEA which are group work where we work like in a company</li>
+                            <li><br><span>3rd grade discovery course</span><br>Observation internship where I was able to discover the world of IT within the PICTIME company</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>BUT IT</span><br>Currently in the 2nd year of BUT IT at the IUT of Lens</li>
+                            <li><br><span>Baccalaureate</span><br>Obtaining the baccalaureate with honors at the Albert Châtelet Douai high school</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projets" id="projets">
+        <div class="center-text" id="projets1">
+            <h1 class="mesprojets">My Projects</h1>
+        </div>
+        <div class="projet-list">
+            <a href="./clicker-anglais.html">
+                <div class="row1">
+                    <img class="img-projet" src="images/arbre-pic.png" alt="">
+                    <div class="main-row">
+                        <div class="row-text">
+                            <h5>Forest Clicker</h5>
+                        </div>
+                    </div>
+                    <h4>Development of a clicker game</h4> 
+                    <div class="img-techno">
+                        <img src="images/logo-JSTS.jpg" alt="">
+                        <img src="images/logo-reactnode.png" alt="">
+                    </div>
+                    
+                </div>
+            </a>
+            <a href="./flatcraft-anglais.html">
+                <div class="row1">
+                    <img class="img-projet" src="images/minecraft_94415.png" alt="">
+                    <div class="main-row">
+                        <div class="row-text">
+                            <h5>FlatCraft</h5>
+                        </div>
+                    </div>
+                    <h4>Development of a 2d Minecraft game</h4>
+                    <div class="img-techno">
+                        <img src="images/Java_Logo.svg" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./pokedex-anglais.html">
+                <div class="row1">
+                    <img class="img-projet" src="images/pokemon_go_play_game_cinema_film_movie_icon-icons.com_69163.png" alt="">
+                    <div class="main-row">
+                        <div class="row-text">
+                            <h5>Pokédex</h5>
+                        </div>
+                    </div>
+                    <h4>Development of a pokédex site</h4>
+                    <div class="img-techno">
+                        <img src="images/Laravel.svg" alt="">
+                        <img src="images/logo-HTMLCSS.svg" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./bookshelf-anglais.html">
+                <div class="row1">
+                    <img class="img-projet" src="images/logo-bs.jpg" alt="">
+                    <div class="main-row">
+                        <div class="row-text">
+                            <h5>Bookshelf</h5>
+                        </div>
+                    </div>
+                    <h4>Development of a website in 36 hours</h4>
+                    <div class="img-techno">
+                        <img src="images/Laravel.svg" alt="">
+                        <img src="images/logo-HTMLCSS.svg" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./jeu-de-societe-anglais.html">
+                <div class="row1">
+                    <img class="img-projet" src="images/jeu-de-plateau.png" alt="">
+                    <div class="main-row">
+                        <div class="row-text">
+                            <h5>Board games</h5>
+                        </div>
+                    </div>
+                    <h4>Development of a board games website</h4>
+                    <div class="img-techno">
+                        <img src="images/Laravel.svg" alt="">
+                        <img src="images/logo-HTMLCSS.svg" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./auvernas-anglais.html">
+                <div class="row1">
+                    <img class="img-projet" src="images/auvergnas.png" alt="">
+                    <div class="main-row">
+                        <div class="row-text">
+                            <h5>Auvernas</h5>
+                        </div>
+                    </div>
+                    <h4>Development of a site for a wine merchant</h4>
+                    <div class="img-techno">
+                        <img src="images/logo-HTMLCSS.svg" alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <p class="section_text_p1" id="contact1">Where to contact me ?</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="images/mail.png" alt="mail icon" class="icon contact-icon">
+            </div>
+            <p><a href="mailto:felix.silvert.04@gmail.com">felix.silvert.04@gmail.com</a></p>
+
+            <div class="contact-info-container">
+                <img src="images/linkedin_logo.png" alt="linkedin icon" class="icon contact-icon">
+            </div>
+            <p><a href="https://www.linkedin.com/in/felix-silvert/" target="_blank">LinkedIn</a></p>
+
+            <div class="contact-info-container">
+                <img src="images/sms.png" alt="tel icon" class="icon contact-icon">
+            </div>
+            <p><a href="sms:0768065250">Send an SMS to 07-68-06-52-50</a></p>
+
+            <div class="contact-info-container">
+                <img src="images/telephone.png" alt="tel icon" class="icon contact-icon">
+            </div>
+            <p><a href="tel:0768065250">Call the 07-68-06-52-50</a></p>
+        </div>
+    </section>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        let mybutton = document.getElementById("myBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0; 
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+
+</body>
+</html>

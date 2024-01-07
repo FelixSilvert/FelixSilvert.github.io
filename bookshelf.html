@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="icon" type="image/png" href="images/profile-pic.png">
+    <title>SILVERT Félix Portfolio</title>
+    <script src="https://kit.fontawesome.com/beb62ff260.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <nav>
+                <h1 class="logo"><p class="silvert">Silvert</p> <p class="felix">Félix</p></h1>
+                <ul id="sidemenu">
+                    <li><a href="./index.html#acceuil">Accueil</a></li>
+                    <li><a href="./index.html#apropos">À propos</a></li>
+                    <li><a href="./index.html#projets1">Projets</a></li>
+                    <li><a href="./index.html#contact1">Contact</a></li>
+                    <li><a href="./index.html#contact1">Anglais <img src="images/uk.png" alt="" class="icon" id="drap"></a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
+
+    <section id="description">
+        <h1 class="name">Bookshelf</h1>
+
+        <p class="text-description">
+            Projet universitaire dévollopé en 36h en colaboration avec des étudiants de BUT MMI. <br> <br>C'est un site sur lequel on peut créer des histoires de type "vous êtes le héro" donc avec des choix possibles qui ammènent à différente fin. On  peut créer entièrement son histoire en ajoutant des chapitres avec le texte et une photo, une vidéo ou un audio et les relier entre eux pour faire plusieurs chemin possibles. On peut ensuite retrouver toutes les histoires sur la page d'acceuil et les lires à notre guise en choissisant nos choix. Il y a aussi une fonctionnalitée de login, register, logout.<br> <br>Les étudiants de BUT MMI étaient chargé de la partie front pendant que nous, les étudiants en BUT Informatique étaient chargé du back. 
+        </p>
+
+        <h1 class="name1">Capture d'écran</h1>
+        <div class="img-desc-div">
+            <img src="images/pic-marathon.jpg" alt="" class="img-desc">
+        </div>
+    </section>
+</body>
+</html>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    let mybutton = document.getElementById("myBtn");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
+    }
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>

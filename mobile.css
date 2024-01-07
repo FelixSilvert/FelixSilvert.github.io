@@ -1,0 +1,201 @@
+@media screen and (max-width: 600px) {
+
+    /*Menu*/
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #1515AF;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul li a{
+        color: white;
+        display: block;
+    }
+    
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    nav ul i{
+        color: white;
+    }
+
+    /*Header*/
+    .logo{
+        font-size: 25px;
+    }
+    
+    .menu{
+        padding-top: 18px;
+        padding-left: 25px;
+    }
+
+    /*ACCEUIL*/
+
+    #profile{
+        display: block;
+    }
+
+    .profile-pic{
+        height: 200px;
+        justify-content: center;
+    }
+
+    .text_1{
+        font-size: 14px;
+    }
+
+    .text_2{
+        font-size: 15px;
+    }
+
+    .name{
+        font-size: 35px;
+    }
+
+    .btn{
+        width: 6rem;
+    }
+
+
+    /*A PROPOS*/
+
+    .col-2 h1{
+        font-size: 30px;
+    }
+
+    .col-1, .col-2{
+        flex-basis: 100%;
+    }
+
+    .col-1{
+        margin-bottom: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        justify-self: center;
+    }
+
+    .user-pic{
+        margin: 0;
+    }
+
+    .col-2{
+        font-size: 12px;
+    }
+
+    .tab-titles p{
+        font-size: 14px;
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+
+    .col-2 p{
+        margin-right: 25px;
+    }
+
+    .text-propos{
+        width: 300px;
+    }
+
+    .container{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .tab-contents.active-tab{
+        display: block;
+    }
+
+    #competences ul{
+        margin-bottom: 25px;
+    }
+
+    #apropos{
+        padding: 0;
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
+
+
+    /*PROJET*/
+
+    .projet-list{
+        grid-template-columns: repeat(1, minmax(100px,300px));
+    }
+
+    /*CONTACT*/
+
+    .contact-info-upper-container {
+        display: block;
+    }
+
+    #contact{
+        height: 550px;
+        margin-bottom: 150px;
+    }
+
+    .contact-info-upper-container{
+        text-align: center;
+    }
+
+    .contact-info-upper-container p{
+        padding: 0;
+    }
+
+    /*DESCRIPTION*/
+
+    .img-desc{
+        height: 150px;
+        margin-bottom: 25vh;
+    }
+
+    .img-desc-div{
+        display: flex;
+        justify-content: center;
+    }
+
+    #description{
+        margin-top: 10vh;
+        margin-left: 10vh;
+        margin-right: 10vh;
+    }
+
+    .text-description{
+        margin-top: 10vh;
+        text-align: center;
+    }
+
+    .lien-github p{
+        width: 230px;
+    }
+
+    .lien-div{
+        justify-content: center;
+        display: flex;
+    }
+
+    .name1{
+        font-size: 30px;
+        margin-top: 50px;
+    }
+
+}

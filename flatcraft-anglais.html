@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="icon" type="image/png" href="images/profile-pic.png">
+    <title>SILVERT Félix Portfolio</title>
+    <script src="https://kit.fontawesome.com/beb62ff260.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <nav>
+                <h1 class="logo"><p class="silvert">Silvert</p> <p class="felix">Félix</p></h1>
+                <ul id="sidemenu">
+                    <li><a href="./indexAnglais.html#acceuil">Home</a></li>
+                    <li><a href="./indexAnglais.html#apropos">About Me</a></li>
+                    <li><a href="./indexAnglais.html#projets1">Projects</a></li>
+                    <li><a href="./indexAnglais.html#contact1">Contact</a></li>
+                    <li><a href="./index.html">French <img src="images/drapeau.png" alt="" class="icon" id="drap"></a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
+
+    <section id="description">
+        <h1 class="name">FlatCraft</h1>
+
+        <p class="text-description">
+            University project carried out in a group of 4 in JAVA with JavaFX.<br> Creation of a 2d game like "Terraria" in JAVA with class management and use of design parts. <br> Crafting functionality, oven, resource harvesting and different worlds (nether, end).        </p>
+
+        <h1 class="name1">Screenshot</h1>
+    </section>
+</body>
+</html>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    let mybutton = document.getElementById("myBtn");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
+    }
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>

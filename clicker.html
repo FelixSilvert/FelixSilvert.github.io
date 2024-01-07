@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="icon" type="image/png" href="images/profile-pic.png">
+    <title>SILVERT Félix Portfolio</title>
+    <script src="https://kit.fontawesome.com/beb62ff260.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <nav>
+                <h1 class="logo"><p class="silvert">Silvert</p> <p class="felix">Félix</p></h1>
+                <ul id="sidemenu">
+                    <li><a href="./index.html#acceuil">Accueil</a></li>
+                    <li><a href="./index.html#apropos">À propos</a></li>
+                    <li><a href="./index.html#projets1">Projets</a></li>
+                    <li><a href="./index.html#contact1">Contact</a></li>
+                    <li><a href="./index.html#contact1">Anglais <img src="images/uk.png" alt="" class="icon" id="drap"></a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
+
+    <section id="description">
+        <h1 class="name">Forest Clicker</h1>
+
+        <p class="text-description">
+            Premier projet en TypeScript et Next.JS alors que je n'avais que très peu de connaissance en JavaScript et aucune en React. J'ai donc fait beaucoup d'erreurs mais l'application est fonctionnelle. <br> <br> C'est un petit jeu type clicker inspiré de, par exemple, "Cookie clicker". Le jeu porte sur le thème de le reforestation avec pour but de sensibiliser les plus jeune à la déforestation. Le but est de cliquer sur l'arbre ce qui nous rapporte 1 point à chaque click. Avec ces points on peut acheter des améliorations qui nous permettent de gagner, par exemple, 1 point par seconde. Plus on en achète, plus les améliorations coutent cher mais plus elles rapportent de point par secondes. Il y a quatres types d'améliorations allant de la plus faible à la plus forte. Il y a une description de notre foret permettant, en prennant le nombre maximum d'arbres que l'on a eu, de nous indiquer sa taille en hectare ainsi que le nombre de KG de CO2 qu'elle put caputurer par an.<br> <br>Comme je l'ai dit au début, j'ai fait plusieurs erreurs de code notament dans l'utilisation de React. Je compte repprendre le projet prochainement pour régler ces problèmes et améliorer le jeu.</p>
+
+        <div class="lien-div">
+            <div class="lien-github" onclick="window.open('https://github.com/FelixSilvert/forest-clicker')">
+                <p>Retrouver le projet sur GitHub</p>
+                <img src="./images/github.png" alt="github_logo" class="icon">
+            </div>
+        </div>
+
+
+        <h1 class="name1">Capture d'écran</h1>
+        <div class="img-desc-div">
+            <img src="images/rep-arbre.png" alt="" class="img-desc">
+        </div>
+
+    </section>
+</body>
+</html>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    let mybutton = document.getElementById("myBtn");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
+    }
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
